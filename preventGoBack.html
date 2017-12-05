@@ -13,6 +13,7 @@
                     alert(history.state);
                 } else {
                     alert("please do not click go back button!!");
+                    history.pushState(stateName, null, null);
                 }
             });
         }
