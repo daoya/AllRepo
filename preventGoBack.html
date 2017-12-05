@@ -1,0 +1,26 @@
+<!DOCTYPE lang="en">
+<html>
+
+<head>
+    <title>test</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script>
+        if (window.history && window.history.pushState) {
+            var stateName = 'samePage';
+            history.pushState(stateName, null, null);
+            $(window).on('popstate', function (e) {
+                if (history.state === stateName) {
+                    alert(history.state);
+                } else {
+                    alert("please do not click go back button!!");
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    same page!
+</body>
+
+</html>
