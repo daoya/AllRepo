@@ -1,0 +1,23 @@
+<!DOCTYPE lang="en">
+<html>
+
+<head>
+    <title>test</title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // 自身のページを履歴に追加
+            location.hash = "#prepage";
+            // ページ戻り時にも自身のページを履歴に追加
+            $(window).on("hashchange", function(){
+                location.hash = "#prepage2";
+            });
+        });
+    </script>
+</head>
+
+<body>
+    same page!
+</body>
+
+</html>
