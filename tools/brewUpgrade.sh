@@ -1,0 +1,1 @@
+brew update && brew list --casks | xargs brew install --cask && brew cleanup
